@@ -16,7 +16,7 @@ function Hero({}: Props) {
       <BackgroundCircle />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src=""
+        src="https://picsum.photos/id/237/200/300"
         alt=""
       />
       <div className="z-20">
