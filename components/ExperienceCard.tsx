@@ -7,7 +7,8 @@ function ExperienceCard({}: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    w-[500px] md:w-[600px] xl:[900px] snap-center"
+    w-[300px] md:w-[450px] xl:w-[700px] snap-center bg-[#292929] p-10 mx-20
+    hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 over"
     >
       <motion.img
         initial={{
@@ -39,11 +40,11 @@ function ExperienceCard({}: Props) {
         </div>
         <p className="uppercase py-5 text-gray-300">Started Work...ended</p>
         <ul className="list-disc space-y-2 ml-5 text-lg">
-          <li>Transformed</li>
-          <li>Transformed</li>
-          <li>Transformed</li>
-          <li>Transformed</li>
-          <li>Transformed</li>
+          <li>Transformed ransformed ransformed </li>
+          <li>Transformed ransformed </li>
+          <li>Transformed </li>
+          <li>Transformed </li>
+          <li>Transformed </li>
         </ul>
       </div>
     </article>
