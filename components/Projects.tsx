@@ -27,7 +27,8 @@ function Projects({}: Props) {
       </h3>
       <div
         className="relative w-full flex overflow-x-scroll
-       overflow-y-hidden snap-x snap-mandatory z-20"
+       overflow-y-hidden snap-x snap-mandatory z-20
+       scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/40"
       >
         {/* <Project /> */}
         {projects.map((projec, i) => (
@@ -38,7 +39,7 @@ function Projects({}: Props) {
             <motion.img
               initial={{
                 y: -300,
-                opacity:0
+                opacity: 0,
               }}
               transition={{
                 duration: 1.2,
