@@ -37,7 +37,7 @@ export default function Home({
     scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/40"
     >
       <Head>
-        <title>Rohit Jire</title>
+        <title>{pageInfo?.name}</title>
       </Head>
 
       {/* Headers */}
@@ -50,21 +50,21 @@ export default function Home({
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experiecne */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences}/>
       </section>
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills}/>
       </section>
 
       {/* Projects */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       {/* Contact Me */}

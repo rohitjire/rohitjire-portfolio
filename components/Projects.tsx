@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { urlFor } from "../sanity";
+import { Project } from "../typings";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{
@@ -31,8 +34,9 @@ function Projects({}: Props) {
        scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/40"
       >
         {/* <Project /> */}
-        {projects.map((projec, i) => (
+        {projects?.reverse().map((project, i) => (
           <div
+          key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5
           items-center justify-center p-20 md:p-44 h-screen"
           >
@@ -49,23 +53,27 @@ function Projects({}: Props) {
                 y: 0,
               }}
               viewport={{ once: true }}
-              className="h-30 w-30"
-              src="https://picsum.photos/id/237/200/200"
-              alt=""
+              className="h-20 w-20"
+              src={urlFor(project.image).url()}
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case study {i + 1} of {projects.length}
-                </span>
-                : Ups Clone
+                </span>{" "}
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {project.technologies.map((technology) => (
+                  <img
+                    className="h-10 w-10"
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                  />
+                ))}
+              </div>
               <p className="text-sm text-center md:text-left">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries,
+                {project.summary}
               </p>
             </div>
           </div>
