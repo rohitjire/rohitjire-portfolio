@@ -40,7 +40,7 @@ export interface Skill extends SanityBody {
 }
 
 export interface Project extends SanityBody {
-  _type: "skill";
+  _type: "project";
   title: string;
   image: Image;
   linkToBuild: string;
