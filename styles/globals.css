@@ -14,3 +14,9 @@
     focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
   }
 }
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}

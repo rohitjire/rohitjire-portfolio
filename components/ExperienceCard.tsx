@@ -15,6 +15,7 @@ function ExperienceCard({ experience }: Props) {
     hover:opacity-100 opacity-70 cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
+        key={experience._id}
         initial={{
           y: -100,
         }}
@@ -41,6 +42,7 @@ function ExperienceCard({ experience }: Props) {
           {/* TechStacks */}
           {experience.technologies.map((technology) => (
             <img
+            key={technology._id}
               className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}
               alt=""
