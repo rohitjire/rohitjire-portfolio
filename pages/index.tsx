@@ -24,13 +24,66 @@ type Props = {
   socials: Social[];
 };
 
-export default function Home() {
+export default function Home({
+  pageInfo,
+  experiences,
+  projects,
+  skills,
+  socials,
+}: Props) {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y 
     snap-mandatory overflow-y-scroll overflow-x-hidden z-0
     scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#F7AB0A]/40 scroll-smooth"
     >
+       <Head>
+        <title>{pageInfo?.name}</title>
+      </Head>
+
+      {/* Headers */}
+      <Header socials={socials} />
+
+      {/* Hero */}
+      <section id="hero" className="snap-center">
+        <Hero pageInfo={pageInfo} />
+      </section>
+
+      {/* About */}
+      <section id="about" className="snap-center">
+        <About pageInfo={pageInfo} />
+      </section>
+
+      {/* Experiecne */}
+      <section id="experience" className="snap-center">
+        <WorkExperience experiences={experiences}/>
+      </section>
+      {/* Skills */}
+      <section id="skills" className="snap-start">
+        <Skills skills={skills}/>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="snap-start">
+        <Projects projects={projects}/>
+      </section>
+
+      {/* Contact Me */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
+
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <img
+              className="h-10 w-10 rounded-full filter grayscale 
+              hover::grayscale-0 cursor-pointer"
+              src={urlFor(pageInfo.profilePic).url()}
+            />
+          </div>
+        </footer>
+      </Link>
  
     </div>
   );
