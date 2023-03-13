@@ -107,6 +107,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
     // Next.js will attempt t re-generate the page
     // When a request comes in
     // At most once every 10 seconds
-    revalidate: 10,
   };
 };
