@@ -11,7 +11,7 @@ type Props = {
 function Header({ socials: socials }: Props) {
   return (
     <header
-      className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20
+      className="sticky top-0 p-2 sm:p-5 flex items-start justify-between max-w-7xl mx-auto z-20
         xl:items-center"
     >
       <motion.div
@@ -28,7 +28,7 @@ function Header({ socials: socials }: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex flex-row items-center"
+        className="flex flex-row items-center space-x-2 sm:space-x-4"
       >
         {socials.map((social) => (
           <SocialIcon
@@ -36,6 +36,7 @@ function Header({ socials: socials }: Props) {
             url={social.url}
             fgColor="gray"
             bgColor="transparent"
+            style={{ width: 24, height: 24 }}
           />
         ))}
       </motion.div>
@@ -53,15 +54,16 @@ function Header({ socials: socials }: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex flex-row items-center text-gray-300"
+        className="flex flex-row items-center text-gray-300 space-x-2 sm:space-x-4"
       >
         <SocialIcon
           className="cursor-pointer"
           network="email"
           fgColor="gray"
           bgColor="transparent"
+          style={{ width: 24, height: 24 }}
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="uppercase hidden md:inline-flex text-xs sm:text-sm text-gray-400">
           Get in Touch
         </p>
       </motion.div>

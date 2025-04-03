@@ -39,6 +39,7 @@ export default function Home({
     >
        <Head>
         <title>{pageInfo?.name}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       {/* Headers */}
@@ -54,10 +55,11 @@ export default function Home({
         <About pageInfo={pageInfo} />
       </section>
 
-      {/* Experiecne */}
+      {/* Experience */}
       <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences}/>
       </section>
+
       {/* Skills */}
       <section id="skills" className="snap-start">
         <Skills skills={skills}/>
@@ -77,14 +79,14 @@ export default function Home({
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img
-              className="h-10 w-10 rounded-full filter grayscale 
-              hover::grayscale-0 cursor-pointer"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full filter grayscale 
+              hover:grayscale-0 cursor-pointer"
               src={urlFor(pageInfo.profilePic).url()}
+              alt="Profile"
             />
           </div>
         </footer>
       </Link>
- 
     </div>
   );
 }

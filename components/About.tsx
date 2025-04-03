@@ -20,11 +20,11 @@ function About({ pageInfo }: Props) {
         opacity: 1,
       }}
       className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl
-     px-10 justify-evenly mx-auto items-center"
+     px-4 sm:px-6 md:px-10 justify-evenly mx-auto items-center pt-16 sm:pt-20 md:pt-24"
     >
       <h3
-        className="absolute top-24 uppercase tracking-[20px]
-       text-gray-500 text-2xl"
+        className="absolute top-8 sm:top-12 md:top-16 uppercase tracking-[20px]
+       text-gray-500 text-xl sm:text-2xl"
       >
         About
       </h3>
@@ -42,16 +42,15 @@ function About({ pageInfo }: Props) {
         }}
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
-        md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
+        className="-mb-10 md:mb-0 flex-shrink-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-96 xl:w-80 xl:h-120 rounded-full object-cover md:rounded-lg"
       />
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className="space-y-6 sm:space-y-10 px-0 md:px-10">
+        <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-slate-200">Little</span>{" "}
           Background
         </h4>
-        <p className="text-base">
+        <p className="text-sm sm:text-base">
           {pageInfo?.backgroundInformation}
         </p>
       </div>
