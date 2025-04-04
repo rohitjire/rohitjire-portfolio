@@ -1,0 +1,14 @@
+:root {
+  --brand-primary: #f7ab0a;
+  --brand-primary--inverted: #000;
+  --brand-secondary: #e694ff;
+  --brand-secondary--inverted: #fff;
+}
+
+/* Ensure the main sanity UI styling is applied */
+@import '@sanity/ui/dist/style.css';
+
+/* Apply Tailwind utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 

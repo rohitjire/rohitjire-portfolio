@@ -3,7 +3,7 @@
   // parts, the actual transpilation is done by babel. Any compiler configuration in
   // here will be ignored.
   "compilerOptions": {
-    "target": "ES2019",
+    "target": "ES2020",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -12,7 +12,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
