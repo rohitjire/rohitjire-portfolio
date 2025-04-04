@@ -29,16 +29,10 @@ md:flex-row max-w-7xl px-4 sm:px-6 md:px-10 justify-evenly mx-auto items-center 
       >
         Contact Me
       </h3>
-      <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 mt-8 sm:mt-12 md:mt-16">
-        <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 mt-8 sm:mt-12 md:mt-16 font-montserrat">
+        <h4 className="text-2xl sm:text-3xl md:text-4xl text-center">
           I have just got what you need. Let's talk
         </h4>
-        <div className="space-y-4 sm:space-y-6">
-          <div className="flex items-center space-x-3 sm:space-x-4 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
-            <p className="text-base sm:text-lg md:text-xl">+919028179378</p>
-          </div>
-
           <div className="flex items-center space-x-3 sm:space-x-4 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
             <p className="text-base sm:text-lg md:text-xl">rohitjire55@gmail.com</p>
@@ -48,7 +42,6 @@ md:flex-row max-w-7xl px-4 sm:px-6 md:px-10 justify-evenly mx-auto items-center 
             <MapPinIcon className="text-[#F7AB0A] h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
             <p className="text-base sm:text-lg md:text-xl">Pune Maharashtra</p>
           </div>
-        </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-full sm:w-fit mx-auto"
