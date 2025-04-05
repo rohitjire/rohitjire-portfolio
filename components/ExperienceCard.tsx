@@ -36,13 +36,13 @@ function ExperienceCard({ experience }: Props) {
 
       <div className="px-2 md:px-8 w-full mt-3">
         <h4 className="text-xl sm:text-2xl md:text-3xl font-light text-center">{experience.jobTitle}</h4>
-        <p className="font-bold text-lg sm:text-xl mt-1 text-center">{experience.company}</p>
+        <p className="font-semibold text-lg sm:text-xl mt-1 text-center">{experience.company}</p>
         
         <div className="flex flex-wrap justify-center gap-2 my-2">
           {experience.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-6 w-6 sm:h-8 sm:w-8 rounded-full"
+              className="h-6 w-6 sm:h-8 sm:w-8 rounded-full bg-white p-1"
               src={urlFor(technology.image).url()}
               alt={technology.title}
             />

@@ -48,7 +48,7 @@ function WorkExperience({ experiences }: Props) {
             ref={scrollContainerRef}
             className="w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-none pb-5"
           >
-            {experiences?.map((experience) => (
+            {experiences?.sort((a, b) => new Date(b.dateStarted).getTime() - new Date(a.dateStarted).getTime()).map((experience) => (
               <div
                 key={experience._id}
                 className="w-full flex-shrink-0 snap-center flex flex-col items-center justify-center px-2 md:px-8 lg:px-20"

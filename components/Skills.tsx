@@ -31,11 +31,11 @@ function Skills({ skills }: Props) {
       <h3 className="absolute top-28 sm:top-32 md:top-36 uppercase tracking-[3px] text-gray-500 text-xs sm:text-sm">
         Hover over a skill for current proficiency
       </h3>
-      <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 mt-16 sm:mt-20 md:mt-24">
-        {skills?.slice(0, skills.length / 2).map((skill) => (
+      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 mt-16 sm:mt-20 md:mt-24">
+        {skills?.sort((a, b) => b.progress - a.progress).slice(0, skills.length / 2).map((skill) => (
           <Skill key={skill._id} skill={skill} />
         ))}
-        {skills?.slice(skills.length / 2, skills.length).map((skill) => (
+        {skills?.sort((a, b) => b.progress - a.progress).slice(skills.length / 2, skills.length).map((skill) => (
           <Skill key={skill._id} skill={skill} directionLeft/>
         ))}
       </div>
