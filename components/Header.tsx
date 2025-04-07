@@ -67,16 +67,6 @@ function Header({ socials: socials }: Props) {
         }}
         className="flex flex-row items-center text-gray-300 space-x-2 sm:space-x-4"
       >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="gray"
-          bgColor="transparent"
-          style={{ width: 24, height: 24 }}
-        />
-        <p className="uppercase hidden md:inline-flex text-xs sm:text-sm text-gray-400">
-          Get in Touch
-        </p>
         <button
           onClick={handleResumeClick}
           className="flex items-center space-x-2 text-gray-400 hover:text-[#F7AB0A]/40 transition-colors duration-200"
