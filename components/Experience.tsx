@@ -32,14 +32,14 @@ function WorkExperience({ experiences }: Props) {
         transition={{ duration: 1.5 }}
         className="w-full"
       >
-        <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl w-full text-center">
+        <h3 className="absolute top-16 uppercase tracking-[20px] text-matte-gray text-2xl w-full text-center">
           Experience
         </h3>
 
         <div className="relative w-full flex items-center mt-28 font-montserrat">
           <button
             onClick={() => scroll("left")}
-            className="absolute left-2 sm:left-10 z-40 cursor-pointer bg-[#F7AB0A]/40 hover:bg-[#F7AB0A]/60 p-1 rounded-full"
+            className="absolute left-2 sm:left-10 z-40 cursor-pointer bg-accent/40 hover:bg-accent/60 p-1 rounded-full"
           >
             <ChevronLeftIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
           </button>
@@ -60,7 +60,7 @@ function WorkExperience({ experiences }: Props) {
 
           <button
             onClick={() => scroll("right")}
-            className="absolute right-2 sm:right-10 z-40 cursor-pointer bg-[#F7AB0A]/40 hover:bg-[#F7AB0A]/60 p-1 rounded-full"
+            className="absolute right-2 sm:right-10 z-40 cursor-pointer bg-accent/40 hover:bg-accent/60 p-1 rounded-full"
           >
             <ChevronRightIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
           </button>

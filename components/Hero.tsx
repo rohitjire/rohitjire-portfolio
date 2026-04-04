@@ -27,12 +27,12 @@ function Hero({ pageInfo }: Props) {
         src={urlFor(pageInfo?.heroImage).url()}
       />
       <div className="z-20">
-        <h2 className="text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+        <h2 className="text-xs sm:text-sm uppercase text-matte-gray pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-4 sm:px-10 font-montserrat">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#D4A053" />
         </h1>
 
         <div className="p-2 sm:p-5 flex flex-wrap justify-center gap-2 sm:gap-4">

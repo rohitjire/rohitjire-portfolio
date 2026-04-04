@@ -1,5 +1,5 @@
 import React from "react";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -14,71 +14,118 @@ type Props = {};
 function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:rohitjire55@gmail.com?subject=${formData.subject}&body=Hi, my name is 
-    ${formData.name}, ${formData.message} Contact me here: ${formData.email}`;
+    window.location.href = `mailto:rohitjire55@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}, ${formData.message} Contact me here: ${formData.email}`;
   };
 
   return (
     <div
       className="h-screen flex relative flex-col text-center md:text-left
-md:flex-row max-w-7xl px-4 sm:px-6 md:px-10 justify-evenly mx-auto items-center pt-16 sm:pt-20 md:pt-24"
+      max-w-7xl px-4 sm:px-6 md:px-10 justify-center mx-auto items-center"
     >
       <h3
         className="absolute top-8 sm:top-12 md:top-16 uppercase tracking-[20px]
-       text-gray-500 text-xl sm:text-2xl"
+        text-matte-gray text-xl sm:text-2xl"
       >
         Contact Me
       </h3>
-      <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 mt-8 sm:mt-12 md:mt-16 font-montserrat">
-        <h4 className="text-2xl sm:text-3xl md:text-4xl text-center">
-          I have just got what you need. Let's talk
-        </h4>
-          <div className="flex items-center space-x-3 sm:space-x-4 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
-            <p className="text-base sm:text-lg md:text-xl">rohitjire55@gmail.com</p>
-          </div>
 
-          <div className="flex items-center space-x-3 sm:space-x-4 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
-            <p className="text-base sm:text-lg md:text-xl">Pune Maharashtra</p>
+      <div className="flex flex-col md:flex-row gap-6 max-w-5xl w-full mt-16 sm:mt-20 font-montserrat">
+        {/* Left Panel - Contact Info */}
+        <div className="bg-surface-card rounded-2xl p-6 sm:p-8 flex-1">
+          <h4 className="text-2xl sm:text-3xl font-semibold text-matte-white">
+            Let's Build Something Together
+          </h4>
+          <p className="text-matte-gray text-sm mt-2">
+            Feel free to reach out. I'm always open to new opportunities.
+          </p>
+
+          <div className="space-y-6 mt-8">
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <EnvelopeIcon className="h-5 w-5 text-accent" />
+              </div>
+              <div className="text-left">
+                <p className="text-matte-gray text-xs uppercase tracking-wider">Email</p>
+                <p className="text-matte-white text-sm sm:text-base">rohitjire55@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <MapPinIcon className="h-5 w-5 text-accent" />
+              </div>
+              <div className="text-left">
+                <p className="text-matte-gray text-xs uppercase tracking-wider">Location</p>
+                <p className="text-matte-white text-sm sm:text-base">Mainz, Germany</p>
+              </div>
+            </div>
           </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-full sm:w-fit mx-auto"
-        >
-          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-            <input
-              {...register("name")}
-              placeholder="Name"
-              className="contactInput"
-              type="text"
-            />
-            <input
-              {...register("email")}
-              placeholder="Email"
-              className="contactInput"
-              type="email"
-            />
-          </div>
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contactInput"
-          />
-          <button
-            type="submit"
-            className="bg-[#F7AB0A] py-2 sm:py-3 px-6 sm:px-8 rounded-md text-black font-bold
-          text-sm sm:text-base"
+        </div>
+
+        {/* Right Panel - Form */}
+        <div className="bg-surface-card rounded-2xl p-6 sm:p-8 flex-[1.5]">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col space-y-4"
           >
-            Submit
-          </button>
-        </form>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="text-matte-gray text-xs uppercase tracking-wider mb-1 block">
+                  Name
+                </label>
+                <input
+                  {...register("name")}
+                  placeholder="Your name"
+                  className="contactInput"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label className="text-matte-gray text-xs uppercase tracking-wider mb-1 block">
+                  Email
+                </label>
+                <input
+                  {...register("email")}
+                  placeholder="Your email"
+                  className="contactInput"
+                  type="email"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="text-matte-gray text-xs uppercase tracking-wider mb-1 block">
+                Subject
+              </label>
+              <input
+                {...register("subject")}
+                placeholder="What's this about?"
+                className="contactInput"
+                type="text"
+              />
+            </div>
+
+            <div>
+              <label className="text-matte-gray text-xs uppercase tracking-wider mb-1 block">
+                Message
+              </label>
+              <textarea
+                {...register("message")}
+                placeholder="Your message..."
+                className="contactInput"
+                rows={4}
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 bg-accent hover:bg-accent-light text-surface-primary
+                font-semibold rounded-lg transition-colors text-sm sm:text-base"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

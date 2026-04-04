@@ -65,7 +65,7 @@ function Header({ socials: socials }: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex flex-row items-center text-gray-300 space-x-2 sm:space-x-4"
+        className="flex flex-row items-center text-matte-light space-x-2 sm:space-x-4"
       >
         <SocialIcon
           className="cursor-pointer"
@@ -79,7 +79,7 @@ function Header({ socials: socials }: Props) {
         </p>
         <button
           onClick={handleResumeClick}
-          className="flex items-center space-x-2 text-gray-400 hover:text-[#F7AB0A]/40 transition-colors duration-200"
+          className="flex items-center space-x-2 text-matte-gray hover:text-accent/40 transition-colors duration-200"
         >
           <ArrowDownTrayIcon className="h-6 w-6" />
           <span className="hidden md:inline-flex text-xs sm:text-sm">Download Resume</span>

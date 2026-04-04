@@ -25,7 +25,7 @@ function Skill({ directionLeft, skill }: Props) {
         }}
         viewport={{ once: true }}
         src={urlFor(skill?.image).url()}
-        className="rounded-full border border-gray-500 object-cover w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16
+        className="rounded-full border border-surface-border object-cover w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16
         xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out bg-white p-1"
         title={skill.title}
       />

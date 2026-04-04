@@ -25,7 +25,7 @@ function About({ pageInfo }: Props) {
     >
       <h3
         className="absolute top-8 sm:top-12 md:top-16 uppercase tracking-[20px]
-       text-gray-500 text-xl sm:text-2xl"
+       text-matte-gray text-xl sm:text-2xl"
       >
         About
       </h3>
@@ -54,7 +54,7 @@ function About({ pageInfo }: Props) {
         </p>
 
         <div className="pt-4">
-          <h4 className="text-xl sm:text-2xl font-montserrat text-gray-400">
+          <h4 className="text-xl sm:text-2xl font-montserrat text-matte-light">
             🎓 Education
           </h4>
           <div className="space-y-2 mt-2">
